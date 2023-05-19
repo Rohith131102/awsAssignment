@@ -7,7 +7,7 @@ from botocore.exceptions import ClientError
 iam = boto3.client('iam')
 
 #  Put files in S3 bucket from lambda
-#  a. Create custom role for AWS lambda which will have only put object access
+#  Create custom role for AWS lambda which will have only put object access
 
 policy_document = {
     "Version": "2012-10-17",
@@ -56,7 +56,7 @@ create_role_response = iam.attach_role_policy(
 
 
 
-#  b. Add role to generate and access Cloud watch logs
+#  Add role to generate and access Cloud watch logs
 
 cloudwatch_logs_policy_document = {
     "Version": "2012-10-17",
