@@ -24,8 +24,8 @@ aws iam create-role --role-name rohith  --assume-role-policy-document file://tru
 }
 
 ```
+<img width="896" alt="Screenshot 2023-05-17 at 4 40 01 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/6abc3888-4e8f-4cb3-9d2d-296c19e24f67">
 
-<img width="896" alt="Screenshot 2023-05-17 at 4 40 01 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/27e63556-160e-4b00-9586-a61742952bee">
 
 **providing full s3 access to the role**
 
@@ -57,7 +57,7 @@ aws ec2 run-instances --image-id ami-0889a44b331db0194 --instance-type t3.micro 
 
 3.instance-profile='rohith_instance'
 
-<img width="1172" alt="Screenshot 2023-05-19 at 1 02 04 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/787dedd2-ae78-43a5-9ae0-89774b9f1e8e">
+<img width="1199" alt="Screenshot 2023-05-19 at 3 35 55 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/cfd57985-43e2-4f6e-8611-01023621e169">
 
 
 creating the Bucket
@@ -65,7 +65,9 @@ creating the Bucket
 ```
 aws s3api create-bucket --bucket rohiths3bucket1311 --region ap-south-1 --create-bucket-configuration LocationConstraint=ap-south-1
 ```
-<img width="1196" alt="Screenshot 2023-05-18 at 11 45 41 AM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/fb82e637-9f46-426d-b74e-0eeca41c6176">
+<img width="1196" alt="Screenshot 2023-05-18 at 11 45 41 AM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/d0631cc2-4a2f-449b-873b-ab9114db1422">
+
+
 
 ## Question-2
 
@@ -161,12 +163,15 @@ iam.attach_role_policy(
 )
 
 ```
-<img width="1118" alt="Screenshot 2023-05-19 at 1 55 27 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/10e478a4-4f0f-4e62-91f4-4184f2fd9722">
+
+<img width="1118" alt="Screenshot 2023-05-19 at 1 55 27 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/ec88cca5-132f-4cbc-95b0-daa5a2f8f86c">
 
 
 c. Create a new Lambda function using the above role
 
-<img width="878" alt="Screenshot 2023-05-19 at 2 04 02 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/1cb05917-1d26-402e-9b63-6a257df09698">
+<img width="885" alt="Screenshot 2023-05-19 at 3 39 07 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/ac2008d9-c2af-451b-8f9b-8241189a0755">
+
+
 
 created a lambda function in which, wrote a python script in such a manner that it generates json in specified format and saves that file in the selected bucket. 
 
@@ -243,13 +248,14 @@ d. Schedule the job to run every minute. Stop execution after 3 runs
 
 created a cloudwatch rule such that it runs every minute and attached to lambda function
 
-<img width="850" alt="Screenshot 2023-05-19 at 2 12 39 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/85973ab0-8538-4efb-a6a1-ae283e76cf0d">
+<img width="853" alt="Screenshot 2023-05-19 at 3 40 48 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/2801e09f-9300-44b3-b993-c336ef3704d7">
 
 To stop exection after three runs I had initilized a count variable in which we increases upon after every execution and once the count reaches three, the executions stops by setting its concurrency to 0
 
 e. Check if cloud watch logs are generated
 
-<img width="1111" alt="Screenshot 2023-05-19 at 2 20 54 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/2c1f840b-503b-4ab6-99bd-34c37746eee0">
+<img width="1114" alt="Screenshot 2023-05-19 at 3 42 15 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/b469d108-12e5-4aa5-98d8-0d74202d9ed3">
+
 
 ## Question-3
 API gateway - Lambda integration
@@ -311,15 +317,15 @@ steps used to create a post API
 ```
 7. Deploy our API by clicking "Actions" > "Deploy API". Select "New Stage" and enter a name for your stage. Click "Deploy"
 
-<img width="1187" alt="Screenshot 2023-05-19 at 3 08 58 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/abde7693-3b8a-449c-bb7c-f6edbe9144c7">
+<img width="1166" alt="Screenshot 2023-05-19 at 3 43 11 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/ec782fff-a9e9-472f-a9d2-7626acf88ad8">
 
-<img width="989" alt="Screenshot 2023-05-19 at 12 14 44 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/a7d5c761-03fe-4c02-8c5c-a01ef9dc7bc9">
+<img width="922" alt="Screenshot 2023-05-19 at 3 44 10 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/2544afb2-f0b1-428b-b869-0fd57d9bdf1d">
 
-<img width="448" alt="Screenshot 2023-05-19 at 12 14 27 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/e4583243-8cdf-4051-b51f-bdd41d670a90">
+<img width="448" alt="Screenshot 2023-05-19 at 12 14 27 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/3dd5d721-8a5e-46c8-910e-2d99b4523fa8">
 
 c. Consume API from the local machine and pass unique data to lambda.
 To send the file using local machine, used curl and below command will do the job.
 
-<img width="1437" alt="Screenshot 2023-05-19 at 3 16 53 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/6fccc095-a665-45ee-843c-1b4ce3c12b45">
+<img width="1440" alt="Screenshot 2023-05-19 at 3 45 03 PM" src="https://github.com/Rohith131102/awsAssignment/assets/123619674/dda00eed-4656-40d8-81f3-60a98f6fd076">
 
 
