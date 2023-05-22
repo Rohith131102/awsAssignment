@@ -33,7 +33,9 @@ aws iam create-role --role-name rohith  --assume-role-policy-document file://tru
 aws iam attach-role-policy --role-name rohith --policy-arn arn:aws:iam::aws:policy/AmazonS3FullAccess
 ```
 
-### b.Create an EC2 instance with above role Creating an instance profile
+### b.Create an EC2 instance with above role
+
+Creating an instance profile
 
 ```
 aws iam create-instance-profile --instance-profile-name rohith_instance
